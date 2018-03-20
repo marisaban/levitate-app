@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="intro-header">
+    <img class="logo" src="assets/img/Elevate_Logo.png" />
+  </div>
+
+  <div class="enter">
+    <div class="signup">
+      <h5 id="sign-up" (click)="launchSignup()">Sign Up</h5>
+      <img class="pointer" src="assets/img/triangle.png" />
+    </div>
+
+    <div class="login">
+        <h5>Login</h5>
+    </div>
+  </div>
+
+  <div class="button-section">
+      <div padding class="facebook">
+          <button ion-button class="fb-btn" block (click)="login()"><ion-icon name="logo-facebook"></ion-icon> Login with Facebook</button>
+      </div>
+
+      <h3>OR</h3>
+
+      <input type="text" value="Email" class="email" (click)="clearInput();"/>
+      <input type="text" value="Password" (click)="clearInput();"/>
+
+      <div padding class="facebook">
+          <button ion-button color="dark" block>Login to Account</button>
+      </div>
+  </div>
+</ion-content>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=160624198084872&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

@@ -1,0 +1,114 @@
+<!--DEFAULT HEADER. Must be copied-pasted to appropriate pages.
+https://forum.ionicframework.com/t/same-header-for-all-pages/75736/3
+-->
+<ion-header class='default'>
+  <ion-navbar hideBackButton="true">
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name='ios-list-outline'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoAddFriendsPage()">
+        <ion-icon name='ios-people'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <ion-searchbar></ion-searchbar>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card *ngFor="let item of cardItems; let i=index;">
+    <ng-container *ngIf="i % 3 !== 0 || i === 0">
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]="item.user.avatar">
+        </ion-avatar>
+        <h2>{{item.user.name}}</h2>
+        <p>{{item.date}}</p>
+      </ion-item>
+
+      <ion-card-content>
+        <p [innerHTML]="item.content"></p>  
+      </ion-card-content>
+
+      <img [src]="item.image">
+
+      <ion-card-content *ngIf="item.taggedUsers.text">
+        <p class='tagged'>Tagged: <span>{{ item.taggedUsers?.text }}</span></p>
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col center text-left>
+          <button ion-button color="primary" clear small icon-left>
+              <img class="small-icon" src="assets/img/GoodIndicator.svg" style="width:20px;height:20px;">
+              <!--<ion-icon name='md-thumbs-up'></ion-icon>-->
+              <!--3-->
+              {{ item.likes }}
+            </button>
+        </ion-col>
+        <ion-col center text-center>
+          <!--12 comments-->
+          <button ion-button color="primary" (click)="openItem(item)" clear small icon-left>
+            {{ item.comments.length + " Comments" }}
+          </button>
+        </ion-col>
+        <ion-col center text-right>
+          <!--3 tags-->
+          <button ion-button color="primary" clear small icon-left>
+              <ion-icon name='bookmark'></ion-icon>
+              {{ item.tags.length + " Tags" }}
+            </button>
+          <!-- {{ item.tags.length + " Tags" }}-->
+        </ion-col>
+      </ion-row>
+          <hr>
+          <hr>
+      <ion-row>
+        <ion-col center text-left>
+          <button ion-button color="primary" clear small icon-left>
+              <img class="small-icon" src="assets/img/GoodIcon.svg" style="width:15px;height:15px;">
+              <!--<ion-icon name='thumbs-up-outline'></ion-icon>-->
+              Good
+            </button>
+        </ion-col>
+        <ion-col center text-center>
+
+
+            <button ion-button color="primary" (click)="openItem(item)" clear small icon-left>
+                <img class="small-icon"  src="assets/img/CommentIcon.svg" style="width:15px;height:15px;">
+                Comment
+              </button>
+
+
+        </ion-col>
+        <ion-col center text-right>
+          <button ion-button color="primary" clear small icon-left>
+              <img class="small-icon" src="assets/img/ShareIcon.svg" style="width:15px;height:15px;">
+              Share
+            </button>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+
+    <!-- Every third card, show a swipe-able card section to refine users preferences.-->
+    <ng-container *ngIf='i % 3 === 0 && i > 0'>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/Logo_Square.png">
+        </ion-avatar>
+        <p class='text-wrap'>We noticed you liked the keyword <a>Oakland Raiders</a></p>
+      </ion-item>
+      <ion-card-content>
+        <swipe></swipe>
+      </ion-card-content>
+    </ng-container>
+
+  </ion-card>
+
+</ion-content>

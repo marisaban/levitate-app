@@ -1,0 +1,35 @@
+page-tabs {
+    // .tab-button[aria-selected=true] .tab-button-icon {
+    //     color: orange !important;
+    // }
+    .tab-button[aria-selected=true]::before {
+        height: 2px;
+        width: 100%;
+        background-color: #94C94B;
+        display: block;
+        content: " ";
+        position: relative;
+        top: -2px;
+        max-width: 40px;
+    }
+    .tabbar {
+        background: white !important;
+    }
+    .tab-button-icon {
+        font-size: 19px !important;
+    }
+
+    // custom icons
+    .ion-ios-paper-outline {
+        &:before { content: ""}
+        background-image: url("/assets/img/profile_icons/Feed_Off.svg");
+        background-size: 17px 17px;
+        background-repeat: no-repeat;
+        background-position: 0.5em 0.2em;
+    }
+
+    .tab-button[aria-selected=true] .ion-ios-paper-outline {
+      background-image: url("/assets/img/profile_icons/Feed_On.svg");
+
+    }
+}

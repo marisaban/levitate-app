@@ -1,0 +1,46 @@
+<!--
+  Generated template for the AddContentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button clear class="saveEnabled" (click)="cancelClicked()">
+      Cancel
+    </button>
+
+    <ion-title>Content</ion-title>
+
+    <ion-buttons end>
+      <button (click)="makePost()" ion-button clear class="{{saveStyle}}">
+        Post
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style="background-color: white" padding>
+  <div>
+    <ion-textarea rows="2" style="font-size: 22pt;height: 17%;border-bottom: 1px solid grey;" placeholder="Add to the goodness..." (input)='changePostText($event.target.value)' [(ngModel)]="post"></ion-textarea>
+    <img class="{{imageStyle}}" src="{{pickedImage}}">
+    <p>{{tagString}}<p>
+    <p style="margin-top: 5px;">{{keywordString}}<p>
+    <div style="margin-top: 20px !important;width: 100%;margin: 0 auto">
+      <button ion-button clear class="no-padding">
+          <img class="profile-icons-left" src="./assets/img/profile_icons/Content_1.svg"/>
+      </button>
+      <button (click)="selectPhoto()"  ion-button clear class="no-padding">
+          <img class="profile-icons-left" src="./assets/img/profile_icons/Photos_On.svg"/>
+      </button>
+      <button (click)="selectTags()" ion-button clear class="no-padding">
+          <img class="profile-icons-left" src="./assets/img/profile_icons/Tags.svg"/>
+      </button>
+      <button ion-button clear class="no-padding" (click)="selectKeywords()">
+          <img class="profile-icons-left" src="./assets/img/profile_icons/Keywords.svg"/>
+      </button>
+    </div>
+  </div>
+</ion-content>

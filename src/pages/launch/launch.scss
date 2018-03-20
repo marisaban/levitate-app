@@ -1,0 +1,21 @@
+page-launch {
+    .scroll-content{
+        background: $green;
+    }
+
+    .loading-screen {
+        display: block;
+        text-align: center;
+        padding: 150px 0 50px 0;
+    }
+
+    .logo {
+        height: 100px;
+    }
+
+    .loading p {
+        text-align: center;
+        color: #ffffff;
+        font-size: 16px;
+    }
+}

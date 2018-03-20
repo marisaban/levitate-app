@@ -1,0 +1,97 @@
+page-add-friends {
+
+
+    h1{
+        text-align: left;
+        padding-left: 5px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+
+    }
+    .item-ios{
+      padding-left: 10px !important;
+      height: 90px;
+    }
+    .sim-friends, .sim-interests{
+        color: black;
+        text-align: center;
+        font-size: 12px; //you know something's weird when you're setting font sizes to uneven px...
+        padding-bottom:0px;
+        padding-left: 0px;
+        margin-bottom: 0px !important;;
+
+    }
+    .col{
+        padding: 0px;
+        margin: 0px;
+
+    }
+    .row{
+        padding: 0px !important;
+    }
+
+    p{
+        color: #000 !important;
+        font-size:24px;
+        font-weight: 600;
+        padding-left: 0px;
+    }
+    .button{
+        width: 120px !important;
+        text-align: center;
+        margin: 0px !important;
+        padding: 0px !important;
+        //margin-bottom:10px;
+    }
+    .buttonCol  ion-icon{
+        margin: 0 0px;
+        padding: 0px;
+
+    }
+
+    ion-avatar img {
+        border-radius: initial !important;
+        width: 60px !important;
+        height: 60px !important;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    .hidden{
+        display:none;
+      }
+
+    .unhidden{
+    display:absolute;
+    }
+    img {
+        padding: 0px !important;
+        margin: 0 auto;
+        float:left;
+    }
+
+
+    .star-col {
+        max-width: 15px;
+        min-width: 15px;
+        margin: 2px 7px 0 10px;
+    }
+
+    .item-ios ion-avatar[item-start] {
+        margin-right: 0;
+    }
+
+    ion-item > .item-inner { border-bottom: none !important }
+
+    .button-ios.button-ios-light.button-default {
+        //TODO - Get proper colour for background here!
+        background-color: darkgrey;
+        color: white;
+    }
+
+    ion-item:nth-of-type(odd){
+        //TODO - Get proper colour, I just ballparked it here.
+        background-color: #f7f7f7;
+    }
+
+}

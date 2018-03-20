@@ -1,0 +1,40 @@
+page-select-photo-modal {
+
+    .normal {
+        padding: 0px !important; 
+        margin: 0px !important;
+        background-color: white;
+        object-fit: cover;
+    }
+
+    .clicked {
+        padding: 0px !important; 
+        margin: 0px !important;
+        border: 5px solid #6095fe;
+        background-color: white;
+        object-fit: cover;
+    }
+
+    .saveDisabled{
+        color: #d3d3d4 !important;
+        background-color: transparent;
+        font-size: 12pt;
+    }
+
+    .saveEnabled {
+        color: #6095fe !important;
+        background-color: transparent;
+        font-size: 12pt;
+    }
+
+      .toolbar-title-ios{
+        color: black;
+        font-size: 16pt;          
+      }
+
+    img {
+        width: 140px;
+        height: 140px;
+    }
+
+}

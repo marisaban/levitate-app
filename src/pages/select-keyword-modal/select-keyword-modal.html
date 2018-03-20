@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+      <button style="color: #6095fe" (click)="closeModal()" ion-button clear>
+        Cancel
+      </button>
+      <ion-title>Add Keywords</ion-title>
+      <ion-buttons end>
+        <button (click)="saveClicked()" ion-button clear class="{{saveStyle}}">
+          Save
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+    <ion-input style="font-size: 18px; text-align: left !important;width: 100%;border-top: 1px solid grey;border-bottom: 1px solid grey;" placeholder="Enter Name" [(ngModel)]="searchName"></ion-input>
+  </ion-header>
+<ion-content style="background-color: white">
+    <ion-item no-lines button *ngFor="let item of this.keywords | FilterPipe: searchName" (click)="keywordClicked(item.name)">
+        <table style="width: 100%">
+          <tr style="height: 40px;">
+            <td style="font-size: 16pt">
+              {{item.name}}
+            </td>
+            <td align="right">
+                <img src="./assets/img/Checkmark.svg" class="{{item.clickedStyle}}">                
+            </td>
+          </tr>
+        </table>
+    </ion-item>
+</ion-content>

@@ -1,0 +1,130 @@
+<!--DEFAULT HEADER. Must be copied-pasted to appropriate pages.
+https://forum.ionicframework.com/t/same-header-for-all-pages/75736/3
+-->
+<ion-header class='default'>
+  <ion-navbar>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img [src]="item.user.avatar">
+      </ion-avatar>
+      <h2>{{item.user.name}}</h2>
+      <p>{{item.date}}</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>{{item.content}}</p>
+    </ion-card-content>
+
+    <img [src]="item.image">
+
+    <ion-card-content>
+      <p class='tagged'>Tagged: <span>{{ item.taggedUsers.text }}</span></p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col center text-left>
+        <button ion-button color="primary" clear small icon-left>
+              <img class="small-icon" src="assets/img/GoodIndicator.svg" style="width:20px;height:20px;">
+              <!--<ion-icon name='md-thumbs-up'></ion-icon>-->
+              <!--3-->
+              {{ item.likes }}
+            </button>
+      </ion-col>
+      <ion-col center text-center>
+        <!--12 comments-->
+        <button ion-button color="primary" clear small icon-left>
+          {{ item.comments.length + " Comments" }}
+          </button>
+      </ion-col>
+      <ion-col center text-right>
+        <!--3 tags-->
+        <button ion-button color="primary" clear small icon-left>
+              <ion-icon name='bookmark'></ion-icon>
+              {{ item.tags.length + " Tags" }}
+            </button>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <ion-row>
+      <ion-col center text-left>
+        <button ion-button color="primary" clear small icon-left>
+              <img class="small-icon" src="assets/img/GoodIcon.svg" style="width:15px;height:15px;">
+              Good
+            </button>
+      </ion-col>
+      <ion-col center text-center>
+
+
+        <button ion-button color="primary" clear small icon-left>
+                <img class="small-icon"  src="assets/img/CommentIcon.svg" style="width:15px;height:15px;">
+                Comment
+              </button>
+
+
+      </ion-col>
+      <ion-col center text-right>
+        <button ion-button color="primary" clear small icon-left>
+              <img class="small-icon" src="assets/img/ShareIcon.svg" style="width:15px;height:15px;">
+              Share
+            </button>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <hr>
+    <ion-navbar>
+      <ion-buttons end>
+        <!-- The input for makeComment is commentInput, then it gets the .value from it. This is some seriously cool Angular weirdness. Look at how commentInput is defined, just an element attribute. It's that easy. The .value part is just how you access a value of any regular input, just like normal with HTML/DOM -->
+        <button (click)="makeComment(commentInput.value)" style="margin-right:10px !important;" ion-button icon-only>
+        Post
+      </button>
+      </ion-buttons>
+      <ion-item>
+        <ion-input class='comment-input' placeholder="Add to the goodness..." #commentInput></ion-input>
+        <button ion-button item-end clear class='comment-button'>
+            <img src="./assets/img/profile_icons/Girl.svg" class='comment-icon'>
+        </button>
+        <button ion-button item-end clear class='comment-button'>
+            <img src="./assets/img/profile_icons/Photos_On.svg" class='comment-icon'>
+        </button>
+
+      </ion-item>
+
+    </ion-navbar>
+
+    <!-- Instead of manually copying and pasting, we keep our code DRY by using a for loop right in the template.  It pulls data from commentList, which is in the comment-page.ts controller. The main reason I did this is because it makes it _way_ easier to add new comments - all we have to do is add a new entry to commentList. -->
+    <ng-container *ngFor="let comment of commentList">
+      <ion-item>
+        <ion-avatar class="commenter" item-start>
+          <img class="commenter" src="./assets/img/{{comment.avatar}}">
+        </ion-avatar>
+        <h2 style="display:inline-block;" class="commenterh2">{{comment.author}}</h2>
+        <button ion-button clear small style="display:inline-block; float:right;">
+
+        <img   src="assets/img/ContributeOn.svg" style="width:18px;height:18px;">
+      </button>
+        <button ion-button clear small style="display:inline-block; float:right;">
+
+          <img   src="assets/img/GoodIcon.svg" style="width:15px;height:15px;">
+      </button>
+
+
+        <p> {{comment.body}}</p>
+      </ion-item>
+      <hr>
+      <hr>
+    </ng-container>
+
+
+
+  </ion-card>
+
+</ion-content>

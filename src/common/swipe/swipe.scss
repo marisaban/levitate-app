@@ -1,0 +1,68 @@
+$cardHeight: 250px;
+
+swipe {
+    img {
+        user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    .col{
+        text-align: center;
+    }
+    .text-only {
+        background-color: #94c94b;
+        h2  { color: white !important; }
+        text-transform: uppercase;
+        height: 100%;
+    }
+    .card .item {
+        min-height: 150px;
+        text-align: center;
+    }
+    #card-stack {
+        width: 100%;
+        min-height: $cardHeight;
+        max-height: 100%;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    #card-stack ion-card {
+        position: absolute;
+        text-align: center;
+        height: 100%;
+        min-height: 100%;
+        width: 100%;
+        max-width: 300px;
+        // margin-left: 33px;
+        margin-left: 20px;
+
+        // background-color: orange !important;
+
+        ion-item {
+            height: 100%;
+        }
+
+        ion-label {
+            max-width: 100%;
+            max-height: 100%;
+
+        }
+        img {
+            max-height: $cardHeight - 60px;
+            width: auto;
+            margin: 0 auto;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+    h2 {
+        margin-top: 0.5em !important;
+        font-size: 30px !important;
+        color: #686a6c !important;
+    }
+}

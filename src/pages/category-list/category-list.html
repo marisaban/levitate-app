@@ -1,0 +1,57 @@
+<ion-header class='default'>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name='ios-list-outline'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoAddFriendsPage()" >
+        <ion-icon name='ios-people'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <h1 style="font-size: 20pt; color: grey">The List</h1>
+    </ion-title>
+  </ion-navbar>
+
+  <ion-row>
+    <ion-item>
+      <ion-input #searchInput type="text" placeholder="Enter Name" (keyup)="onSearchKeyUp(searchInput.value)"></ion-input>
+      <button item-right (click)="onPinClick()" class='img-button'>
+        <img src="./assets/img/Location.png" alt="" *ngIf="!pinActive">
+        <img src="./assets/img/Location_Open.png" alt="" *ngIf="pinActive">
+      </button>
+    </ion-item>
+    </ion-row>
+</ion-header>
+
+<ion-content>
+  <ion-list class='elevate-list'>
+    <ion-item>
+      <h2>{{list.name}}</h2>
+    </ion-item>
+
+    <button *ngFor="let user of list.all; let i = index;" ion-item (click)="goToUserProfile(user)" [ngClass]="{muted: user.friend}">
+        {{ user.name }}
+    </button>
+  </ion-list>
+
+
+  <ion-grid class='bottom-panel' [ngClass]="{hidden: !pinActive}" >
+
+    <ion-row>
+      <span class='panel-title'>Select Distance</span>
+      <ion-item>
+        <ion-range min="0000" max="1000" step="100" snaps="true" [(ngModel)]="distance" color="danger" (ionChange)="onRangeChange($event)">
+        </ion-range>
+      </ion-item>
+    </ion-row>
+    <ion-row class='range-annotations'>
+      <ion-col>Me</ion-col>
+      <ion-col>{{ distanceText() }}</ion-col>
+      <ion-col>World</ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

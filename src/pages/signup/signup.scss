@@ -1,0 +1,56 @@
+page-signup {
+    .scroll-content {
+        background: #ffffff;
+    }
+
+    .intro-header {
+        padding: 80px 0;
+    }
+
+    img.logo {
+        display: block;
+        margin: 0 auto;
+        height: 80px;
+    }
+
+    .enter {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .signup {
+        width: 50%;
+        float: left;
+    }
+
+    .login {
+        width: 50%;
+        float: right;
+    }
+
+    img.pointer {
+        text-align: center;
+        position: relative;
+        left: 40%;
+    }
+
+    h5 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #666666;
+    }
+
+    h3 {
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .button-section {
+        background: $green;
+        display: inline-block;
+        width: 100%;
+        padding: 65px 40px;
+        position: absolute;
+        bottom: 0;
+    }
+}

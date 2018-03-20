@@ -1,0 +1,15 @@
+$cardHeight: 250px;
+page-swipe {
+    ion-content {
+        background-color: #fff !important;
+    }
+    .card-ios {
+        box-shadow: none !important;
+        margin: 0; //stops text from peaking through
+    }
+
+    #card-stack {
+        margin-top: 50px;
+        margin-bottom: 75px;
+    }
+}

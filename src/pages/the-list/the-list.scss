@@ -1,0 +1,150 @@
+category-list-page,
+list-page {
+    .top-panel {
+        background-color: white;
+        padding-bottom: 0; // border-bottom: 3px solid black !important;
+        // input {padding-left: 8px;}
+        // ion-icon {font-size: 24px !important;}
+        .item-inner {
+            border-bottom: none !important;
+        }
+        position: fixed !important;
+        z-index: 9999;
+        &+ion-list.list {
+            //make up for gap due to position:fixed.
+            padding-top: 58px;
+        }
+    }
+    .bottom-panel {
+        position: fixed !important;
+        bottom: 35px !important;
+        padding: 0 !important;
+        box-shadow: 0 0px 7px 2px #949494;
+        background-color: white;
+        transition: transform 0.3s;
+        &.hidden {
+            transform: translateY(100%);
+        }
+    } //All of this is coded assuming viewport width is 375px, i.e. iPhone
+    .range-annotations {
+        position: absolute;
+        left: 20px;
+        right: -100px;
+        bottom: 3px;
+        font-size: 12px;
+    }
+    .range-annotations>*:nth-child(2) {
+        position: relative;
+        left: -9px;
+    }
+    .panel-title {
+        font-size: 10px;
+        position: relative;
+        top: 15px;
+        left: 2em;
+        z-index: 99999;
+    }
+    ion-list {
+        margin-bottom: 65px !important; //Height of the bottom-panel???
+    }
+    hr {
+        height: 1px !important; // width: 100% !important;
+        width: 96% !important; //matching design at 375px
+        background-color: rgba(0, 0, 0, 0.26);
+        margin-bottom: 0;
+    }
+    .list-header {
+        background-color: white !important;
+        text-transform: none !important;
+    }
+    .muted {
+        color: rgb(185, 185, 185);
+    }
+
+       ion-item:nth-of-type(even) {
+        background-color: #f7f7f7;
+    }
+    .friend-icon {
+        height: 25px;
+        width: 25px;
+        padding-right: 5px;
+    }
+    .text-input-ios {
+        text-align: left !important;
+        padding: 10px;
+    }
+    .text {
+        color: grey;
+        top: 16%;
+        position: fixed;
+        font-size: 12pt;
+    }
+    .text-empty {
+        color: #f4f4f4;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    ion-content {
+        background-color: white !important;
+    }
+
+    ion-header {
+      ion-input {
+        font-size: 18px !important;;
+        text-align: left !important;
+        // width: 90% !important;;
+        width: 100% !important;;
+        // margin-left: 5% !important;;
+        border-top: 1px solid grey !important;;
+        border-bottom: 1px solid grey !important;;
+      }
+      .item-inner {
+        border-bottom: none !important;
+      }
+
+      .img-button {
+        position: absolute;
+        right: 10px;
+      }
+    }
+
+    h2 {
+      font-size: 20px !important;
+    }
+
+}
+
+// The idea with this .elevate-list class is it can be reused in lots of screens,
+//eg. [07.xx] List, [09.xx] Content, and [10.xx] Settings.
+.elevate-list {
+    margin-left: 5%;
+    &>button.item:nth-child(even) {
+        background-color: rgb(241, 241, 241);
+    }
+    &>button.item ion-icon {
+        margin-right: 5px;
+    }
+    &>button.item,
+    button.item>.item-inner {
+        max-height: 40px !important;
+        min-height: 20px !important;
+    }
+    button.item .item-inner {
+        border-bottom: none !important;
+    }
+
+    .category {
+      margin-left: -5px;
+      width: calc(100% + 5px);
+    }
+
+}
+
+.img-button {
+    background: none;
+    margin: 0 !important;
+    padding: 0;
+    & > img {
+        max-height: 30px;
+    }
+}

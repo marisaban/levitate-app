@@ -1,0 +1,83 @@
+<ion-header class='default'>
+  <ion-navbar hideBackButton="true">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="goBackToFriends()">
+        <ion-icon name='ios-list-outline'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoAddFriendsPage()" >
+        <ion-icon name='ios-people'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <ion-searchbar></ion-searchbar>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: white;">
+  <ion-grid style="height: 50px;margin-top: 10px;" center>
+    <ion-row>
+       <img class="prof-img" src="./assets/img/Aaron_George.png"> 
+      <ion-col style="margin-left: 10px !important;">
+        <p class="name">{{res[0]}}</p>
+        <p class="name">{{res[1]}}</p>
+        <button ion-button clear class="no-padding">
+            <img class="profile-icons-left" src="./assets/img/profile_icons/Messages.svg"/>  
+        </button>
+        <button ion-button clear class="no-padding">
+           <img class="profile-icons" src="./assets/img/profile_icons/Telephone.svg"/> 
+        </button>
+        <button ion-button clear class="no-padding">  
+           <img class="profile-icons" src="./assets/img/profile_icons/Emails.svg"/> 
+        </button>
+        <button ion-button clear class="no-padding">  
+           <img class="profile-icons" src="./assets/img/profile_icons/Photos.svg"/> 
+        </button>
+        <button ion-button clear class="no-padding">
+           <img class="profile-icons" src="./assets/img/profile_icons/Connection.svg"/> 
+        </button>
+      </ion-col>
+      <div class="line-margin">
+      </div>
+    </ion-row>
+  </ion-grid>
+  <ion-grid style="width: 225px;margin-left: 0px;">
+    <ion-row justify-content-start>
+      <ion-col style="margin-top: 60px; height: 30px;margin-left: 5px;">
+          <img style="float:left;margin-top: 12px;width:25px;height:25px;" src="./assets/img/profile_icons/Profile_Icon.png"/>
+          <h4 style="color:#8d8d8d;float:left;margin-left:10px;font-size: 11pt;">Profile</h4>
+      </ion-col>
+      <ion-col style="margin-top: 60px; height: 30px;">
+          <button ion-button small style="margin-top: 12px;width: 100px;display: inline-block;background-color: #8d8d8d"><img src="./assets/img/profile_icons/Add_Friend.svg" style="color: white;float:left;margin-right:0.5em;width: 15px; height: 15px;">Add Friend</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div style="width:90%;margin-left:10px;">
+    <div style="width: 100%;">
+      <div class="content">
+        <p>About: {{item.about}}</p>
+      </div>
+      <div class="line">
+      </div>
+      <div class="content">
+        <p>Elevate Score: {{item.elevateScore}}</p>
+      </div>
+      <div class="line">
+      </div>
+        <div class="content">
+        <p>Common Interests: (37) Wine, Movies, Polotics, Education, Music and 27 more.</p>
+      </div>
+      <div class="line">
+      </div>
+        <div class="content">
+        <p>Common Friends: (14) Grace Jun, Jennifer Lowell, Bob Daskin, Sarah Izlowski, and 10 more.</p>
+      </div>
+      <div class="line">
+      </div>
+        <div class="content">
+        <p>Total Friends: {{item.totalFriends}}</p>
+      </div>
+    </div>
+   </div>
+</ion-content>

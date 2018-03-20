@@ -1,0 +1,66 @@
+<!--This header has to be copied and pasted to each page, and tweaked (or removed) as appropriate.-->
+
+<ion-header class='default'>
+    <ion-navbar hideBackButton>
+        <ion-buttons start>
+            <button style="width: 21.41px; height: 32px;" ion-button icon-only>
+        <ion-icon name='ios-list-outline'></ion-icon>
+      </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button style="width: 32.88px; height: 32px;" ion-button icon-only (click)="gotoAddFriendsPage()">
+        <ion-icon name='ios-people'></ion-icon>
+      </button>
+        </ion-buttons>
+        <ion-title>
+            <!--<input class='header-search' type="text" name="search" placeholder="Search" />-->
+            <!--<ion-searchbar (input)="getItems($event)"></ion-searchbar>-->
+            <ion-searchbar></ion-searchbar>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item  *ngFor="let item of addFriendsList;">
+            <ion-avatar item-start *ngIf="item.picture">
+                <img [src]="item.picture">
+            </ion-avatar>
+
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col class='star-col'>
+                        <img  src="assets/img/{{item.star}}" style="width:15px;height:15px; margin: 0px !important;">
+                    </ion-col>
+
+                    <ion-col>
+                        <ion-row>
+                            <p>{{ item.name }}</p>
+                        </ion-row>
+                        <ion-row style="text-align:center !important;">
+                            <ion-col><span class="sim-interests">{{ item.similar.friends}}</span></ion-col>
+                            &nbsp;&nbsp;
+                            <ion-col><span  class="sim-interests">{{ item.similar.interests}}</span></ion-col>
+                        </ion-row>
+                        <ion-row style="text-align:center !important;">
+                            <!--<ion-col class="buttonCol"><button ion-button (click)="openModal()">Friend Request</button></ion-col>-->
+                            <ion-col class="buttonCol">
+                                <button ion-button small (click)="openModal(item)" color="{{item.clicked}}">
+                                        <span class="{{item.img}}"><img  class="{{item.img}}" src="assets/img/AddFriend.svg" style="width:15px;height:15px; margin: 0px !important;">
+                                        &nbsp; </span>{{item.type}}
+                                    </button>
+                                </ion-col>
+                                &nbsp;&nbsp;
+                            <ion-col class="buttonCol">
+                                <button  ion-button color="light" small>
+                                <img   src="assets/img/Remove.svg" style="width:15px;height:15px; margin: 0px !important;"> &nbsp; Remove
+                           </button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+    </ion-list>
+</ion-content>

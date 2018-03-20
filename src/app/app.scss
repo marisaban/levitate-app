@@ -1,0 +1,138 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.content-md,
+.content-ios {
+    background-color: #EEEEEE;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ion-app.ios {
+    font-family: 'Open Sans';
+}
+
+ion-header.default {
+    .toolbar-background {
+        background-color: white;
+    }
+    input {
+        width: 100%;
+        text-align: center;
+        font-weight: 200;
+    }
+    input::placeholder {
+        color: #CDCDCD;
+    }
+    .bar-button {
+        color: #787A7C;
+    }
+    .searchbar-input-container .searchbar-search-icon {
+        display: none !important
+    }
+    .searchbar-input {
+        background-color: white !important;
+        border-radius: 0;
+        border: 1px solid #808080;
+        width: 100%;
+    }
+
+
+    .ion-ios-list-outline {
+        content: url('../assets/icon/Tray.svg');
+        width: 33px;
+        height: 33px;
+        position: relative;
+        right: -5px;
+    }
+
+    .ion-ios-people {
+        content: url('../assets/icon/Add_Friends_1.svg');
+        width: 33px;
+        height: 33px;
+        position: relative;
+        right: 2px
+    }
+
+    //Make the search bar wider, by increasing the title size
+    ion-title {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+ion-footer.elevate-nav {
+    font-size: 26px;
+    .active {
+        color: #A7D36C !important;
+    }
+}
+
+.button-small-ios {
+    height: 1.8em !important;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+// These helpers _should_ be in Ionic by default but are missing for some
+// reason. Oh well, quicker to add them then find out why. Prototype lyfe4eva
+.text-wrap {
+    white-space: normal;
+}
+
+.text-center {
+    text-align: center;
+}
+
+//Colour is set in the svg file. Since we use `content` to load svg, we can't apply css colours. 
+.ion-ios-contacts[elevateicon] {
+    content: url('../assets/icon/happy.svg');
+    width: 20px;
+    height: 17px;
+    position: relative;
+    top: 1px;
+}
+
+.ion-ios-eye[elevateicon] {
+    content: url('../assets/icon/Elder.svg');
+    position: relative;
+    top: 1px;
+    width: 20px;
+    height: 17px;
+    padding-right: 2px;
+}
+
+.ion-ios-analytics[elevateicon] {
+    content: url('../assets/icon/Influencer.svg');
+    width: 20px;
+    height: 17px;
+    position: relative;
+    top: 1px;
+    padding: 1px;
+}
+
+.ion-ios-color-wand[elevateicon] {
+    content: url('../assets/icon/Contributor.svg');
+    width: 20px;
+    height: 17px;
+    position: relative;
+    top: 1px;
+    padding: 0 2px;
+}

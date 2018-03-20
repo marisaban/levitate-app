@@ -1,0 +1,36 @@
+page-friends {
+    ion-item:nth-of-type(even) {
+        background-color: rgb(241, 241, 241);
+    }
+
+    .friend-icon{
+        width: 20px;
+        height: 17px;
+        position: relative;
+        top: 1px;
+        margin-right: 5px;
+    }
+
+    .text-input-ios{
+        text-align: left !important;
+        padding: 10px;
+    }
+
+    .text{
+        color: grey;
+        top: 16%;
+        position: fixed;
+        font-size: 12pt;
+    }
+
+    .text-empty{
+        color: #f4f4f4;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    ion-item-group > ion-item {
+      max-height: 40px !important;
+      min-height: 20px !important;
+    }
+}

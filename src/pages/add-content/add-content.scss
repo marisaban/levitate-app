@@ -1,0 +1,87 @@
+page-add-content {
+    ion-header  ion-navbar {
+        //  Note - font-size is just approx for now, until we get Sketch/details
+        ion-title > .toolbar-title { font-size: 20px !important; font-weight: 400 !important;}
+        button {color: rgb(170, 170, 170) !important;}
+ }
+     .no-padding {
+        padding: 0px !important;
+        margin: 0px !important;
+        width: 24%;
+    }
+
+        //each icon
+    .profile-icons-left {
+        height: 40px;
+        width: 40px;
+        color: #f4f4f4;
+    }
+
+    p {
+        color: #67696b;
+        // margin: 0px;
+        margin: 10px 0;
+        padding: 0px;
+    }
+
+    .toolbar-background {
+        background-color: #fff;
+      }
+
+      .toolbar-title-ios{
+        color: grey;
+        font-size: 16pt;
+        font-weight: bold;
+      }
+
+    ::-webkit-input-placeholder {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .image_uploaded {
+        display: block;
+        margin: 0 auto;
+        max-height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .image_not_uploaded {
+        display: none;
+        margin: 0 auto;
+        max-height: 0px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .uploaded_img_active {
+        display: inline;
+    }
+
+    .saveDisabled{
+        color: #d3d3d4 !important;
+        background-color: transparent;
+        font-size: 12pt;
+    }
+
+    .saveEnabled {
+        color: #6095fe !important;
+        background-color: transparent;
+        font-size: 12pt;
+    }
+
+    .text-input-ios {
+      font-size: 14px;
+    }
+}
+
+
+//Modal element isn't a child to page-add-content, so CSS selector must be as such:
+.full-modal .modal-wrapper {
+  min-height: 800px !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: auto;
+}

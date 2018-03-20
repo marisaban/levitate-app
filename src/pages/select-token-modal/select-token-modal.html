@@ -1,0 +1,35 @@
+<!--This header has to be copied and pasted to each page, and tweaked (or removed) as appropriate.-->
+
+<ion-header class='default'>
+   
+</ion-header>
+
+<ion-content>
+    
+    <p>Select from the following options:</p>
+    
+   <div class="buttons">
+        <button ion-button color="dark" (click)="tenTokens()" >
+            10 Tokens - $3.00
+        </button>
+    </div>
+    <div class="buttons">
+        <button ion-button color="dark" (click)="twentyFiveTokens()" >
+            25 Tokens - $5.00
+        </button>
+    </div>
+    <div class="buttons">
+        <button ion-button color="dark" (click)="fiftyTokens()" >
+            50 Tokens - $8.00
+        </button>
+    </div>
+    <div class="buttons" (click)="cancel()">
+        <button ion-button color="dark">
+            Cancel
+        </button>
+    </div>
+   
+    <div id="token-div">       
+         Tokens Left: {{tokenCount}}
+    </div>
+</ion-content>

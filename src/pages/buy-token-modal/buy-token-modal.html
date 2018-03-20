@@ -1,0 +1,26 @@
+<!--This header has to be copied and pasted to each page, and tweaked (or removed) as appropriate.-->
+
+<ion-header class='default'>
+   
+</ion-header>
+
+<ion-content>
+    
+    <p>You have chosen to add a friend. You are currently out of tokens.</p>
+    
+   <div class="buttons">
+        <button ion-button color="dark" (click)="buyTokens()" >
+            Purchase Tokens
+        </button>
+    </div>
+    <div class="buttons" (click)="close()">
+        <button ion-button color="dark">
+            Cancel
+        </button>
+    </div>
+   
+    <div id="token-div">
+            
+        Tokens Left: {{tokenCount}}
+    </div>
+</ion-content>

@@ -1,0 +1,270 @@
+<!--DEFAULT HEADER. Must be copied-pasted to appropriate pages.
+https://forum.ionicframework.com/t/same-header-for-all-pages/75736/3
+-->
+<ion-header class='default'>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name='ios-list-outline'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoAddFriendsPage()" >
+        <ion-icon name='ios-people'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <h1 style="font-size: 20pt; color: grey">Friends</h1>
+    </ion-title>
+  </ion-navbar>
+  <ion-input style="font-size: 18px; text-align: left !important;width: calc(93% + 2px); margin-left: calc(4% + 1px);border-top: 1px solid grey;border-bottom: 1px solid grey;" placeholder="Enter Name" [(ngModel)]="searchName"></ion-input>
+</ion-header>
+
+<ion-content style="background-color: white;">
+  <div style="width: 90%; margin-left: 5%;">
+    <div style="width: 98%;float:left">
+      <ion-item-group>
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.A | FilterPipe: searchName)?.length">A</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.A | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+          </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.B | FilterPipe: searchName)?.length">B</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.B | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.D | FilterPipe: searchName)?.length">D</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.D | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.E | FilterPipe: searchName)?.length">E</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.E | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.F | FilterPipe: searchName)?.length">F</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.F | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.G | FilterPipe: searchName)?.length">G</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.G | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.H | FilterPipe: searchName)?.length">H</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.H | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.J | FilterPipe: searchName)?.length">J</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.J | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.M | FilterPipe: searchName)?.length">M</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.M | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.N | FilterPipe: searchName)?.length">N</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.N | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.P | FilterPipe: searchName)?.length">P</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.P | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.R | FilterPipe: searchName)?.length">R</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.R | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.S | FilterPipe: searchName)?.length">S</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.S | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.T | FilterPipe: searchName)?.length">T</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.T | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.V | FilterPipe: searchName)?.length">V</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.V | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.W | FilterPipe: searchName)?.length">W</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.W | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+
+        <ion-item no-lines ion-item-divider *ngIf="(alphaFriends.Y | FilterPipe: searchName)?.length">Y</ion-item>
+          <ion-item no-lines button *ngFor="let item of alphaFriends.Y | FilterPipe: searchName" (click)="goToUserProfile(item)">
+          <table>
+            <tr>
+              <td>
+                <img src="./assets/img/profile_icons/Girl.svg" class="friend-icon">
+              </td>
+              <td>
+                {{ item.name }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+      </ion-item-group>
+    </div>
+    <div style="float: right;">
+        <p class="text">A<br>B<br>C<br>D<br>E<br>F<br>G<br>H<br><p class="text-empty">I</p>J<br><p class="text-empty">K<br>L</p>M<br>N<br><p class="text-empty">O</p>P<br><p class="text-empty">Q</p>R<br>S<br>T<br><p class="text-empty">U</p>V<br>W<br><p class="text-empty">X</p>Y<br><p class="text-empty">Z</p></p>
+    </div>
+  </div>
+</ion-content>

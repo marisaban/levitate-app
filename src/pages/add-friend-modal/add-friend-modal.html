@@ -1,0 +1,32 @@
+<!--This header has to be copied and pasted to each page, and tweaked (or removed) as appropriate.-->
+
+<ion-header class='default'>
+
+</ion-header>
+
+<ion-content>
+    <div class="head">
+    <p>You have chosen to add a friend. This will deduct a token. Please confirm this choice.</p>
+    </div>
+   <div class="buttons">
+        <button ion-button color="dark" (click)="buyTokens()" >
+        Confirm Request
+        </button>
+    </div>
+    <div class="buttons" (click)="cancel()">
+        <button ion-button color="dark">
+         Delete Request
+        </button>
+    </div>
+    <div id="checkbox-div">
+        <ion-checkbox  [(ngModel)]="payBothTokens"  ></ion-checkbox> <p id="checkbox-text">Pay both tokens</p>
+        <div class="popup" (click)="popup()">
+            <img  src="assets/img/information.svg" style="width:15px;height:15px; margin: 0px !important;">
+            <span class="popuptext" id="infoPopup">Connecting with friends requires a token for each party. By checking this box, you can pay for both tokens.</span>
+        </div>
+    </div>
+    <div id="token-div">
+
+        <p>Tokens Left: {{tokenCount}}</p>
+    </div>
+</ion-content>

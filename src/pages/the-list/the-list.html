@@ -1,0 +1,69 @@
+<ion-header class='default'>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name='ios-list-outline'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoAddFriendsPage()" >
+        <ion-icon name='ios-people'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <h1 style="font-size: 20pt; color: grey">The List</h1>
+    </ion-title>
+  </ion-navbar>
+
+  <ion-row>
+    <ion-item>
+      <ion-input #searchInput type="text" placeholder="Enter Name" (keyup)="onSearchKeyUp(searchInput.value)"></ion-input>
+      <button item-right (click)="onPinClick()" class='img-button'>
+        <img src="./assets/img/Location.png" alt="" *ngIf="!pinActive">
+        <img src="./assets/img/Location_Open.png" alt="" *ngIf="pinActive">
+      </button>
+    </ion-item>
+    </ion-row>
+</ion-header>
+
+<ion-content>
+
+  <ion-list class='elevate-list'>
+
+    <ng-container *ngFor="let item of list; let i = index;">
+      <button ion-item (click)="goToListCategory(item)" class='category'>
+        {{ item.name }}
+      </button>
+
+      <button *ngIf='item.contributors.length' ion-item (click)="goToUserProfile(item.contributors[0])" [ngClass]="{muted: item.contributors[0].friend}">
+        <ion-icon color='primary' name="eye" elevateicon></ion-icon> {{ item.contributors[0].name }}
+      </button>
+      <button *ngIf='item.influencers.length' ion-item (click)="goToUserProfile(item.influencers[0])" [ngClass]="{muted: item.influencers[0].friend}">
+        <ion-icon color='primary' name="analytics" elevateicon></ion-icon> {{ item.influencers[0].name }}
+      </button>
+      <button *ngIf='item.connectors.length' ion-item (click)="goToUserProfile(item.connectors[0])" [ngClass]="{muted: item.connectors[0].friend}">
+        <ion-icon color='primary' name="color-wand" elevateicon></ion-icon> {{ item.connectors[0].name }}
+      </button>
+      <button *ngIf='item.elders.length' ion-item (click)="goToUserProfile(item.elders[0])" [ngClass]="{muted: item.elders[0].friend}">
+        <ion-icon color='primary' name="contacts" elevateicon></ion-icon> {{ item.elders[0].name }}
+      </button>
+    </ng-container>
+  </ion-list>
+
+  <ion-grid class='bottom-panel' [ngClass]="{hidden: !pinActive}" >
+
+    <ion-row>
+      <span class='panel-title'>Select Distance</span>
+      <ion-item>
+        <ion-range min="0000" max="1000" step="100" snaps="true" [(ngModel)]="distance" color="danger" (ionChange)="onRangeChange($event)">
+        </ion-range>
+      </ion-item>
+    </ion-row>
+    <ion-row class='range-annotations'>
+      <ion-col>Me</ion-col>
+      <ion-col>{{ distanceText() }}</ion-col>
+      <ion-col>World</ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

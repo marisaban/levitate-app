@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="login-header">
+      <div class="signup">
+        <h5 id="sign-up">Sign Up</h5>
+        <img class="pointer" src="assets/img/triangle.png" />
+      </div>
+  
+      <div class="login">
+          <h5 (click)="launchLogin();" >Login</h5>
+      </div>
+  </div>
+
+  <div class="fields-section">
+    <div class="photo" *ngIf="!base64Image">
+        <img src="assets/img/add-photo.png" (click)="takePhoto()" />
+    </div>
+    <div class="user-upload">
+      <img [src]="base64Image" class="user-image" *ngIf="base64Image"/>
+  </div>
+
+    <div class="fields">
+        <input type="text" value="First Name" (click)="clearInput();"/>
+
+        <input type="text" value="Last Name" (click)="clearInput();"/>
+    
+        <input type="text" value="Email" (click)="clearInput();"/>
+    
+        <input type="text" value="Password" (click)="clearInput();"/>
+    
+        <input type="text" value="Password Again" (click)="clearInput();"/>
+
+        <button ion-button color="dark" block>Create Account</button>
+
+        <p class="legal">
+          By clicking "Create Account", you are indicating that you have read the <a>Privacy Policy</a>
+          and agree to the <a>Terms of Service</a>.
+        </p>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,72 @@
+<ion-header styler="background-color: white">
+  <ion-navbar>
+
+    <button style="color: #6095fe" (click)="closeModal()" ion-button clear>
+      Cancel
+    </button>
+
+    <ion-title>Camera Roll</ion-title>
+
+    <ion-buttons end>
+      <button (click)="saveClicked()" ion-button clear class="{{saveStyle}}">
+        Save
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <table cellspacing="0" cellpadding="0" style="background-color: white;width: 100%">
+    <tr style="width: 100%">
+      <td style="width: 33%;height: 33%">
+        <button (click)="pickPhoto(0)" clear style="background-color: white !important">
+          <img src="{{img[0].img}}" class="{{img[0].border}}" />
+        </button>  
+      </td>
+      <td style="width: 33%;height: 33%">
+        <button (click)="pickPhoto(1)" clear style="background-color: white !important">
+          <img src="{{img[1].img}}" class="{{img[1].border}}" />
+        </button>        
+      </td>
+      <td style="width: 33%;height: 33%">
+        <button (click)="pickPhoto(2)" clear style="background-color: white !important">
+          <img src="{{img[2].img}}" class="{{img[2].border}}" />
+        </button>        
+      </td>
+    </tr>
+    <tr style="width: 100%">
+      <td style="width: 33%;height: 33%">
+        <button (click)="pickPhoto(3)" clear style="background-color: white !important">
+          <img src="{{img[3].img}}" class="{{img[3].border}}" />
+        </button>        
+      </td>
+      <td style="width: 33%;height: 33%">
+        <button (click)="pickPhoto(4)" clear style="background-color: white !important">
+          <img src="{{img[4].img}}" class="{{img[4].border}}" />
+        </button>        
+      </td>
+      <td style="width: 33%;height: 33%">
+        <button (click)="pickPhoto(5)" clear style="background-color: white !important">
+          <img src="{{img[5].img}}" class="{{img[5].border}}" />
+        </button>        
+      </td>
+    </tr>
+    <tr style="width: 100%">
+      <td style="width: 33%;height: 33%">
+        <button (click)="pickPhoto(6)" clear style="background-color: white !important">
+          <img src="{{img[6].img}}" class="{{img[6].border}}" />
+        </button>        
+      </td>
+      <td style="width: 33%;height: 33%">
+        <button (click)="pickPhoto(7)" clear style="background-color: white !important">
+          <img src="{{img[7].img}}" class="{{img[7].border}}" />
+        </button>        
+      </td>
+      <td style="width: 33%;height: 33%">
+        <button (click)="pickPhoto(8)" clear style="background-color: white !important">
+          <img src="{{img[8].img}}" class="{{img[8].border}}" />
+        </button>        
+      </td>
+    </tr>
+  </table>
+</ion-content>

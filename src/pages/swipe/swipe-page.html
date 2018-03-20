@@ -1,0 +1,24 @@
+<!--DEFAULT HEADER. Must be copied-pasted to appropriate pages.
+https://forum.ionicframework.com/t/same-header-for-all-pages/75736/3
+-->
+<ion-header class='default'>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name='ios-list-outline'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoAddFriendsPage()">
+        <ion-icon name='ios-people'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <ion-searchbar></ion-searchbar>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <swipe></swipe>
+</ion-content>
