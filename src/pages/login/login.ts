@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MainPage } from '../../pages/pages';
 import { SignupPage } from '../signup/signup';
@@ -35,17 +36,22 @@ export class LoginPage {
     public user: User,
     public toastCtrl: ToastController,
     public translateService: TranslateService,
-    private fb: Facebook) {
+    private fb: Facebook,
+    private splashScreen: SplashScreen) {
 
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
     })
 
+    this.splashScreen.hide();
+
     fb.getLoginStatus()
     .then(res => {
+    
       console.log(res.status);
       if(res.status === "connect") {
         this.isLoggedIn = true;
+        this.navCtrl.push(MainPage);
       } else {
         this.isLoggedIn = false;
       }
@@ -59,6 +65,8 @@ export class LoginPage {
         if(res.status === "connected") {
           this.isLoggedIn = true;
           this.getUserDetail(res.authResponse.userID);
+
+
         } else {
           this.isLoggedIn = false;
         }
@@ -77,6 +85,7 @@ export class LoginPage {
       .then(res => {
         console.log(res);
         this.users = res;
+        this.navCtrl.push(MainPage);
       })
       .catch(e => {
         console.log(e);

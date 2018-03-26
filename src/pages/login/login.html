@@ -21,8 +21,10 @@
 
       <h3>OR</h3>
 
-      <input type="text" value="Email" class="email" (click)="clearInput();"/>
-      <input type="text" value="Password" (click)="clearInput();"/>
+      <!-- <input type="text" value="Email" class="email" (click)="clearInput();"/> -->
+      <ion-input type="email" placeholder="Email Input" class="email"></ion-input>
+      <ion-input type="password" placeholder="Password"></ion-input>
+ <!--      <input type="text" value="Password" (click)="clearInput();"/> -->
 
       <div padding class="facebook">
           <button ion-button color="dark" block>Login to Account</button>
