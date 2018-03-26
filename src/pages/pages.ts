@@ -9,12 +9,15 @@ import { LoginPage } from './login/login';
 import { LaunchPage } from './launch/launch';
 import { SignupEmailPage } from './signup-email/signup-email';
 import { WelcomePage } from './welcome/welcome';
+import { AddFriendsPage } from './add-friends/add-friends';
+import { FriendsPage } from './friends/friends';
+import { InviteFriendsPage } from './invite-friends/invite-friends';
+import { InviteTabPage } from './invite-tab/invite-tab';
+import { UserAccountPage } from './user-account/user-account';
 
 // The page the user lands on after opening the app and without a session
-//export const FirstRunPage = TabsPage;
-export const FirstRunPage = LoginPage;
+export const FirstRunPage = UserAccountPage;
 
 // The main page the user will see as they use the app over a long period of time.
 // Change this if not using tabs
-//export const MainPage = TabsPage;
-export const MainPage = LoginPage;
+export const MainPage = UserAccountPage;

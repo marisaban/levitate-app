@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 372:
+/***/ 377:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,6 +9,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup_email__ = __webpack_require__(128);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupEmailPageModule", function() { return SignupEmailPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_account__ = __webpack_require__(132);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserAccountPageModule", function() { return UserAccountPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +20,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SignupEmailPageModule = (function () {
-    function SignupEmailPageModule() {
+var UserAccountPageModule = (function () {
+    function UserAccountPageModule() {
     }
-    return SignupEmailPageModule;
+    return UserAccountPageModule;
 }());
-SignupEmailPageModule = __decorate([
+UserAccountPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__signup_email__["a" /* SignupEmailPage */],
+            __WEBPACK_IMPORTED_MODULE_2__user_account__["a" /* UserAccountPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__signup_email__["a" /* SignupEmailPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__user_account__["a" /* UserAccountPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__signup_email__["a" /* SignupEmailPage */]
+            __WEBPACK_IMPORTED_MODULE_2__user_account__["a" /* UserAccountPage */]
         ]
     })
-], SignupEmailPageModule);
+], UserAccountPageModule);
 
-//# sourceMappingURL=signup-email.module.js.map
+//# sourceMappingURL=user-account.module.js.map
 
 /***/ })
 

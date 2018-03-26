@@ -1,21 +1,17 @@
 page-launch {
-    .scroll-content{
-        background: $green;
+    ion-content {
+        background-image: url("../assets/img/Elevate-Girl.png");
+        background-size: cover;
     }
 
-    .loading-screen {
-        display: block;
-        text-align: center;
-        padding: 150px 0 50px 0;
-    }
-
-    .logo {
-        height: 100px;
-    }
-
-    .loading p {
-        text-align: center;
-        color: #ffffff;
-        font-size: 16px;
+    .welcome-sign {
+        padding-top: 50px;
+        p {
+            text-align: center;
+            color: #000000;
+            text-transform: uppercase;
+            font-size: 22px;
+            
+        }
     }
 }

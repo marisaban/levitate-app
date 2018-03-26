@@ -90,6 +90,10 @@ ion-footer.elevate-nav {
     font-size: 1.2rem;
 }
 
+// toggle invite friends bar 
+.invite-bar {
+    opacity: 0;
+}
 
 // These helpers _should_ be in Ionic by default but are missing for some
 // reason. Oh well, quicker to add them then find out why. Prototype lyfe4eva

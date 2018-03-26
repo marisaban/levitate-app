@@ -1,4 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, Http, BaseRequestOptions } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
@@ -42,6 +43,9 @@ import { AddContentPage } from '../pages/add-content/add-content';
 import { SelectPhotoPage } from '../pages/select-photo-modal/select-photo-modal';
 import { SelectTagPage } from '../pages/select-tag-modal/select-tag-modal';
 import { SelectKeywordPage } from '../pages/select-keyword-modal/select-keyword-modal';
+import { InviteFriendsPage } from '../pages/invite-friends/invite-friends';
+import { InviteTabPage } from '../pages/invite-tab/invite-tab';
+import { UserAccountPage } from '../pages/user-account/user-account';
 
 import { Swipe } from '../common/swipe/swipe';
 import { Api } from '../providers/api';
@@ -115,6 +119,7 @@ let pages = [
   SwipePage,
   AddFriendsPage,
   FriendsPage,
+  InviteFriendsPage,
   ModalContentPage,
   CommentPage,
   BuyModalContent,
@@ -127,6 +132,8 @@ let pages = [
   SelectPhotoPage,
   SelectTagPage,
   SelectKeywordPage,
+  InviteTabPage,
+  UserAccountPage,
   //Common reusable components
   Swipe,
 ];

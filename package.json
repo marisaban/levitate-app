@@ -12,6 +12,7 @@
     "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
+    "@angular/animations": "5.2.9",
     "@angular/common": "4.1.2",
     "@angular/compiler": "4.1.2",
     "@angular/compiler-cli": "4.1.2",
@@ -20,7 +21,7 @@
     "@angular/http": "4.1.2",
     "@angular/platform-browser": "4.1.2",
     "@angular/platform-browser-dynamic": "4.1.2",
-    "@ionic-native/camera": "^3.12.1",
+    "@ionic-native/camera": "^3.14.0",
     "@ionic-native/core": "3.10.2",
     "@ionic-native/facebook": "^4.6.0",
     "@ionic-native/google-maps": "3.12.1",

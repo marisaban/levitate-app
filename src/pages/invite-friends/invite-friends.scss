@@ -1,0 +1,89 @@
+page-invite-friends {
+    ion-item:nth-of-type(even) {
+        background-color: rgb(241, 241, 241);
+    }
+
+    button.clear {
+        background: transparent;
+        float: right;
+        padding: 0;
+
+        .checkmark--filled, .checkmark--inner {
+            font-size: 1.8em;
+        }
+    }
+
+    .friend-icon{
+        width: 20px;
+        height: 17px;
+        position: relative;
+        top: 1px;
+        margin-right: 5px;
+    }
+
+    .text-input-ios{
+        text-align: left !important;
+        padding: 0px 10px;
+    }
+
+    .text{
+        color: grey;
+        top: 13%;
+        position: fixed;
+        font-size: 12pt;
+    }
+
+    .text-empty{
+        color: #f4f4f4;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    ion-item-group > ion-item {
+      max-height: 40px !important;
+      min-height: 20px !important;
+    }
+
+    ion-label.label.label-ios {
+        display: inline-block;
+        width: 100%;
+
+        p {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .checkmark {
+            color: $green;
+            float: right;
+        }
+    }
+
+    .checkmark--filled, .checkmark--inner {
+        color: $green;
+        float: right;
+    }
+
+    ion-label.label.label-ios {
+        table, tr {
+            width: 100%;
+        }
+    }
+
+    .invite-bar {
+        position: absolute;
+        z-index: 10;
+        height: 50px;
+        bottom: 38px;
+        left: 0;
+        background: black;
+        color: white;
+        text-align: center;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .invite-bar p {
+        font-size: 17px;
+    }
+}
