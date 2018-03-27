@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule, Http, BaseRequestOptions } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -181,6 +182,7 @@ export function providers() {
   declarations: declarations(),
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     SwingModule,
     TranslateModule.forRoot({
