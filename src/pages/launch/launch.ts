@@ -6,6 +6,17 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
   selector: 'page-launch',
   templateUrl: 'launch.html',
+  animations: [
+    trigger('animateState', [
+      transition('void => *', [
+          style({transform: 'translateX(-100%)'}),
+          animate('500ms ease-out')
+      ]),
+      transition('* => void', [
+          animate('500ms ease-in', style({transform: 'translateX(100%'}))
+      ])
+    ])
+  ]
 })
 export class LaunchPage {
 
