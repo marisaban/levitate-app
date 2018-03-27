@@ -30984,17 +30984,6 @@ page-login ion-icon.icon.icon-ios.ion-logo-facebook {
   margin-right: 10px;
 }
 
-<<<<<<< c1a1557c303ead3a5065140c6810951877f6c117
-page-login input {
-  width: 100%;
-  height: 40px;
-  display: block;
-  color: #666;
-  padding: 5px !important;
-  background-color: white !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-=======
 page-login input[type="text"] {
   width: 263px;
   height: 40px;
@@ -31002,7 +30991,6 @@ page-login input[type="text"] {
   color: #666;
   margin-right: auto;
   margin-left: auto;
->>>>>>> working on animations and account page
 }
 
 page-login .email {
@@ -31788,6 +31776,24 @@ page-tutorial p b {
 
 page-user-account ion-item:nth-of-type(odd) {
   background-color: #f1f1f1;
+}
+
+page-user-account ion-item-group {
+  display: block;
+  margin-top: 10px;
+}
+
+page-user-account ion-item table {
+  width: 100%;
+}
+
+page-user-account .item-ios .item-button {
+  font-size: 1.5em;
+  float: right;
+}
+
+page-user-account .button-clear-ios, page-user-account ion-icon.icon.icon-ios.ion-ios-arrow-forward {
+  color: #32db64;
 }
 
 page-welcome .scroll-content {

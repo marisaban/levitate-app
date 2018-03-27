@@ -7,8 +7,6 @@ webpackJsonp([2],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_content__ = __webpack_require__(127);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddContentPageModule", function() { return AddContentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__launch__ = __webpack_require__(265);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LaunchPageModule", function() { return LaunchPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
