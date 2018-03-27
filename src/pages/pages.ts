@@ -14,10 +14,11 @@ import { FriendsPage } from './friends/friends';
 import { InviteFriendsPage } from './invite-friends/invite-friends';
 import { InviteTabPage } from './invite-tab/invite-tab';
 import { UserAccountPage } from './user-account/user-account';
+import { ProfilePage } from './profile/profile';
 
 // The page the user lands on after opening the app and without a session
-export const FirstRunPage = UserAccountPage;
+export const FirstRunPage = WelcomePage;
 
 // The main page the user will see as they use the app over a long period of time.
 // Change this if not using tabs
-export const MainPage = UserAccountPage;
+export const MainPage = WelcomePage;
