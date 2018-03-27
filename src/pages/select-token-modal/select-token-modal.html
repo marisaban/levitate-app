@@ -1,8 +1,13 @@
-<!--This header has to be copied and pasted to each page, and tweaked (or removed) as appropriate.-->
-
 <ion-header class='default'>
-   
-</ion-header>
+    <ion-navbar hideBackButton="false">
+      <ion-title>
+        <h1 style="font-size: 20pt; color: grey">Purchase Tokens</h1>
+      </ion-title>
+    </ion-navbar>
+    <div class="tokens-left">
+        Tokens Left: {{tokenCount}}
+    </div>
+  </ion-header>
 
 <ion-content>
     
@@ -29,7 +34,4 @@
         </button>
     </div>
    
-    <div id="token-div">       
-         Tokens Left: {{tokenCount}}
-    </div>
 </ion-content>

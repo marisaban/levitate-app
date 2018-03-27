@@ -1,0 +1,94 @@
+page-share-brand {
+    ion-avatar img {
+        //TODO ARC - Jonathan has a a small mask here, it's not a perfect square.
+        //Replace border-radius with proper SVG mask later.
+        border-radius: initial !important;
+        width: 50px !important;
+        height: 50px !important;
+        padding-top: 0px !important;
+    }
+
+
+    ion-card > ion-item {
+      margin-top: 10px !important;
+    }
+    ion-avatar {
+      margin-bottom: 0 !important;
+    }
+
+    // Selector for the name + date text after avatar.
+    ion-avatar + .item-inner .label {
+      margin-bottom: 0;
+      margin-top: 0;
+      overflow: visible;
+      h2 + p:first-of-type {
+          // We need special spacing here so it matches the size of the avatar.
+          position: relative;
+          top: 5px;
+      }
+    }
+
+    .card-content-ios {
+      padding-bottom: 0px !important;
+      padding-top: 0px !important;
+      margin-bottom: 10px !important;
+    }
+
+    .item-ios, .card-content-ios {
+      padding-left: 10px !important;
+    }
+
+
+
+    img {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+    }
+    .small-icon{
+        margin: 5px !important;
+    }
+    .card-ios {
+        box-shadow: none;
+        width: 100%;
+        margin: 12px 0;
+
+        // Temporary/removable. Just to deal with an image which is waaay too big and needs cropping.
+        img {max-height: 250px;}
+    }
+    h2 {
+        padding-top: 0px;
+    }
+    p {
+        margin-top: 10px !important;
+        margin-bottom: 0 !important;
+        line-height: 14px !important;
+    }
+    hr {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+    .item h2 {
+      margin-bottom: 0;
+    }
+    .col {
+        padding: 3px 5px; //Super quick-n-dirty alignment.  Tidy up bottom card button alignment if possible.
+        &,
+        button {
+            color: #AAAAAA !important;
+        }
+    }
+
+
+  .button-small-ios {
+    font-size: 14px !important;
+    padding: 0px;
+    padding-right: 5px;
+  }
+
+  hr + ion-row > ion-col[text-center] {
+    //Match up the words 'Comment' vertically
+    position: relative;
+    left: -3px;
+  }
+}
+

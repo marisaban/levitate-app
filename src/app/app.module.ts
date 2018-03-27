@@ -1,7 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule, Http, BaseRequestOptions } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -47,6 +47,8 @@ import { SelectKeywordPage } from '../pages/select-keyword-modal/select-keyword-
 import { InviteFriendsPage } from '../pages/invite-friends/invite-friends';
 import { InviteTabPage } from '../pages/invite-tab/invite-tab';
 import { UserAccountPage } from '../pages/user-account/user-account';
+import { ShareBrandPage } from '../pages/share-brand/share-brand';
+
 
 import { Swipe } from '../common/swipe/swipe';
 import { Api } from '../providers/api';
@@ -135,6 +137,7 @@ let pages = [
   SelectKeywordPage,
   InviteTabPage,
   UserAccountPage,
+  ShareBrandPage,
   //Common reusable components
   Swipe,
 ];
@@ -182,7 +185,7 @@ export function providers() {
   declarations: declarations(),
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
+   // BrowserAnimationsModule,
     HttpModule,
     SwingModule,
     TranslateModule.forRoot({

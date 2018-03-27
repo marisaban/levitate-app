@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { ListPage } from '../the-list/the-list';
 // need to create share a brand page
+import { SelectTokenAmount } from '../select-token-modal/select-token-modal';
 import { LoginPage } from '../login/login';
 
 @IonicPage()
@@ -22,6 +23,10 @@ export class UserAccountPage {
 
   pushList(){
     this.navCtrl.push(ListPage);
+  }
+
+  pushTokens(){
+    this.navCtrl.push(SelectTokenAmount);
   }
 
   logOut(){

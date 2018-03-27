@@ -140,3 +140,8 @@ ion-footer.elevate-nav {
     top: 1px;
     padding: 0 2px;
 }
+
+// hide back text 
+span.back-button-text.back-button-text-ios {
+    display: none;
+}
