@@ -11,14 +11,21 @@ page-user-account {
         width: 100%;
     }
 
+    // icons
+    img {
+        height: 18px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
     //button
     .item-ios .item-button {
-        font-size: 1.5em;
+        font-size: 18px;
         float: right;
     }
 
     .button-clear-ios, ion-icon.icon.icon-ios.ion-ios-arrow-forward {
-        color: #32db64;
+        color: #91c949;
     }
 }
 

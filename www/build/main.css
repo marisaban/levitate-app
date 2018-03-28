@@ -31903,13 +31903,19 @@ page-user-account ion-item table {
   width: 100%;
 }
 
+page-user-account img {
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 page-user-account .item-ios .item-button {
-  font-size: 1.5em;
+  font-size: 18px;
   float: right;
 }
 
 page-user-account .button-clear-ios, page-user-account ion-icon.icon.icon-ios.ion-ios-arrow-forward {
-  color: #32db64;
+  color: #91c949;
 }
 
 page-welcome .scroll-content {
