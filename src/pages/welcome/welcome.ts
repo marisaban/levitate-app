@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, ViewController, App } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
+import { SignupPage } from '../signup/signup'
 import { LoginPage } from '../login/login';
 
 /**
@@ -12,20 +14,28 @@ import { LoginPage } from '../login/login';
 */
 @Component({
   selector: 'page-welcome',
-  templateUrl: 'welcome.html'
+  templateUrl: 'welcome.html',
+  animations: [
+    trigger('animateLogo', [
+      state('opaque', style({
+      opacity: 1
+      })),
+      state('transparent', style({
+      opacity: 0
+      })),
+      transition('opaque => transparent', animate('4000ms ease-in')),
+      transition('transparent => opaque', animate('4000ms ease-out'))
+    ])
+  ]
 })
 export class WelcomePage {
 
   constructor(public navCtrl: NavController, private splashScreen: SplashScreen, public viewCtrl: ViewController, public appCtrl: App) { }
 
-  ionViewDidEnter() {
- 
-    this.splashScreen.hide();
- 
-    setTimeout(() => {
-      this.viewCtrl.dismiss();
-    }, 4000);
- 
-  }
+  // ionViewDidEnter() { 
+  //   setTimeout(() => {
+  //     this.navCtrl.push(SignupPage);
+  //   }, 3000);
+  // }
 
 }
