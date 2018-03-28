@@ -17,14 +17,13 @@ import { LoginPage } from '../login/login';
   templateUrl: 'welcome.html',
   animations: [
     trigger('animateLogo', [
-      state('opaque', style({
-      opacity: 1
-      })),
-      state('transparent', style({
-      opacity: 0
-      })),
-      transition('opaque => transparent', animate('4000ms ease-in')),
-      transition('transparent => opaque', animate('4000ms ease-out'))
+      transition('void => *', [
+          style({transform: 'scale(0)'}),
+          animate('2s ease-in')
+      ]),
+      transition('* => void', [
+          animate('2s ease-out', style({transform: 'scale(10)'}))
+      ])
     ])
   ]
 })
@@ -32,10 +31,10 @@ export class WelcomePage {
 
   constructor(public navCtrl: NavController, private splashScreen: SplashScreen, public viewCtrl: ViewController, public appCtrl: App) { }
 
-  // ionViewDidEnter() { 
-  //   setTimeout(() => {
-  //     this.navCtrl.push(SignupPage);
-  //   }, 3000);
-  // }
+    ionViewDidEnter() { 
+      setTimeout(() => {
+        this.navCtrl.push(SignupPage);
+      }, 3000);
+    }
 
 }

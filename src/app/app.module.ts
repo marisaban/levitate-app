@@ -48,7 +48,7 @@ import { InviteFriendsPage } from '../pages/invite-friends/invite-friends';
 import { InviteTabPage } from '../pages/invite-tab/invite-tab';
 import { UserAccountPage } from '../pages/user-account/user-account';
 import { ShareBrandPage } from '../pages/share-brand/share-brand';
-
+import { NotificationsPage } from '../pages/notifications/notifications';
 
 import { Swipe } from '../common/swipe/swipe';
 import { Api } from '../providers/api';
@@ -138,6 +138,7 @@ let pages = [
   InviteTabPage,
   UserAccountPage,
   ShareBrandPage,
+  NotificationsPage,
   //Common reusable components
   Swipe,
 ];
