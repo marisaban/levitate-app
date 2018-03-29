@@ -12,24 +12,24 @@
 
   <div class="fields-section">
     <div class="photo" *ngIf="!base64Image">
-        <img src="assets/img/add-photo.png" (click)="takePhoto()" />
+        <img src="assets/icon/AddPhoto.svg" (click)="takePhoto()" />
     </div>
     <div class="user-upload">
       <img [src]="base64Image" class="user-image" *ngIf="base64Image"/>
   </div>
 
     <div class="fields">
-        <input type="text" value="First Name" (click)="clearInput();"/>
+        <input type="text" placeholder="First Name"/>
 
-        <input type="text" value="Last Name" (click)="clearInput();"/>
+        <input type="text" placeholder="Last Name"/>
     
-        <input type="text" value="Email" (click)="clearInput();"/>
+        <input type="text" placeholder="Email"/>
     
-        <input type="text" value="Password" (click)="clearInput();"/>
+        <input type="text" placeholder="Password"/>
     
-        <input type="text" value="Password Again" (click)="clearInput();"/>
+        <input type="text" placeholder="Password Again"/>
 
-        <button ion-button color="dark" block>Create Account</button>
+        <button ion-button color="dark" block (click)="enterApp();">Create Account</button>
 
         <p class="legal">
           By clicking "Create Account", you are indicating that you have read the <a>Privacy Policy</a>

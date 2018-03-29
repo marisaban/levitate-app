@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { LoginPage } from '../login/login';
-
+import { InviteFriendsPage } from '../invite-friends/invite-friends';
 
 @IonicPage()
 @Component({
@@ -55,6 +55,10 @@ export class SignupEmailPage {
 
   launchLogin(){
     this.navCtrl.push(LoginPage);
+  }
+
+  enterApp(){
+    this.navCtrl.push(InviteFriendsPage);
   }
 
 }

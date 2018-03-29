@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ElevateAPI } from '../../providers/elevate-api'
 import { ProfilePage } from '../../pages/profile/profile';
+import { ListPage } from '../the-list/the-list';
+import { LaunchPage } from '../launch/launch';
 import { FriendDummyData } from '../../mocks/api/friends-data';
 import { BaseComponent } from '../../common/base-component'
 import { Item } from '../../models/item';
@@ -145,6 +147,11 @@ export class InviteFriendsPage extends BaseComponent {
 
     sendInvites(event){
         this.invitesSent = !this.invitesSent;
+        this.navCtrl.push(LaunchPage);
+    }
+
+    launchList(){
+        this.navCtrl.push(ListPage);
     }
     
 }
@@ -178,4 +185,6 @@ export interface Friend {
     commonInterests: any[]; //TODO ARC - Decide if need own interface
     totalFriends: number;
 }
+
+
 
