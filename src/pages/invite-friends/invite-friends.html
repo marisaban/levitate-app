@@ -29,7 +29,7 @@ https://forum.ionicframework.com/t/same-header-for-all-pages/75736/3
                 <ion-icon class="checkmark--inner" name="ios-checkmark-circle-outline" *ngIf="!checkmarkClicked"></ion-icon>
                 <ion-icon class="checkmark--filled" name="checkmark-circle" *ngIf="checkmarkClicked"></ion-icon>
             </button>
-            <p>Select All</p>
+            <p class="select-tag">Select All</p>
           </ion-item>
           <ion-item no-lines button *ngFor="let item of alphaFriends.A | FilterPipe: searchName">
           <table>
@@ -64,8 +64,10 @@ https://forum.ionicframework.com/t/same-header-for-all-pages/75736/3
                 {{ item.name }}
               </td>
               <td>
+                <button class="clear" (click)="checkIn();">
                   <ion-icon class="checkmark--inner" name="ios-checkmark-circle-outline" *ngIf="!checkmarkClicked"></ion-icon>
                   <ion-icon class="checkmark--filled" name="checkmark-circle" *ngIf="checkmarkClicked"></ion-icon>
+              </button>
               </td>
             </tr>
           </table>
@@ -344,6 +346,5 @@ https://forum.ionicframework.com/t/same-header-for-all-pages/75736/3
   </div>
 </ion-content>
 <button ion-button class="invite-bar" id="invite-bar" (click)="sendInvites($event); ">Send Friends Invites</button>
-<!-- <button ion-button class="invite-bar" id="invite-bar" (click)="sendInvites($event);" [@clickedButton]="invitesSent">Send Friends Invites</button> -->
 
 
