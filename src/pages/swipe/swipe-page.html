@@ -2,14 +2,14 @@
 https://forum.ionicframework.com/t/same-header-for-all-pages/75736/3
 -->
 <ion-header class='default'>
-  <ion-navbar>
+  <ion-navbar hideBackButton>
     <ion-buttons start>
-      <button ion-button icon-only>
+      <button ion-button icon-only (click)="launchList();">
         <ion-icon name='ios-list-outline'></ion-icon>
       </button>
     </ion-buttons>
     <ion-buttons end>
-      <button ion-button icon-only (click)="gotoAddFriendsPage()">
+      <button ion-button icon-only (click)="gotoAddFriendsPage();">
         <ion-icon name='ios-people'></ion-icon>
       </button>
     </ion-buttons>

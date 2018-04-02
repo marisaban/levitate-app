@@ -1,18 +1,35 @@
-<!--
-  Generated template for the NotificationsPage page.
+<!--This header has to be copied and pasted to each page, and tweaked (or removed) as appropriate.-->
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>notifications</ion-title>
+<ion-header class='default'>
+  <ion-navbar hideBackButton>
+      <ion-title>
+        <h1 style="font-size: 20pt; color: grey">Notifications</h1>
+      </ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content>
+  <ion-list>
+      <ion-item id="notification-tab" *ngFor="let item of addFriendsList; let i = index" (click)="checkNotification(item);">
+          <ion-avatar item-start *ngIf="item.picture">
+              <img [src]="item.picture">
+          </ion-avatar>
 
-<ion-content padding>
 
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <ion-row>
+                        <p>{{ item.name }} <span class="sim-interests">{{ item.notification }}</span> </p>
+                      </ion-row>
+                      <ion-row style="text-align:center !important;">
+                        <ion-col class="time"><span class="sim-interests">{{ item.time }}</span></ion-col>
+                      </ion-row>
+
+
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </ion-item>
+  </ion-list>
 </ion-content>

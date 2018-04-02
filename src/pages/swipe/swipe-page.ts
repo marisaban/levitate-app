@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { NavController } from 'ionic-angular';
 import { ElevateAPI } from '../../providers/elevate-api'
 import { BaseComponent } from '../../common/base-component'
+import { ListPage } from '../the-list/the-list';
 
 /**
  * Problem: Right now all cards are treated the same, but in design it says
@@ -69,6 +70,10 @@ export class SwipePage extends BaseComponent {
         console.log('removedCard', removedCard, 'remaining cards', this.cards);
         // this.getTopics(1); //Get more topics from API? Constantly show more?
         this.api.postTopics(removedCard);
+    }
+
+    launchList() {
+        this.navCtrl.push(ListPage);
     }
 
     ngAfterViewInit() {

@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 import { ModalContentPage } from '../add-friend-modal/add-friend-modal';
 import { BuyModalContent } from '../buy-token-modal/buy-token-modal';
 import { AlertController } from 'ionic-angular';
+//import { ListPage } from '../the-list/the-list';
+
 @Component({
     selector: 'page-add-friends',
     templateUrl: 'add-friends.html'
@@ -65,13 +67,13 @@ export class AddFriendsPage {
             item.clicked = "light";
         }
 
-
-
     }
     gotoAddFriendsPage() {
         return null;
     }
 
 }
+
+
 
 

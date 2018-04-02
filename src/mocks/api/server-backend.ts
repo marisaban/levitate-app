@@ -36,7 +36,9 @@ function setupAllResponses(c) {
                 similar: {
                     friends: "27 Similar Friends",
                     interests: "26 Similar Interests",
-                }
+                },
+                time: '30 minutes ago',
+                notification: 'liked your comment.'
             },
             {
                 name: "Bart Tramor",
@@ -48,7 +50,9 @@ function setupAllResponses(c) {
                 similar: {
                     friends: "20 Similar Friends",
                     interests: "18 Similar Interests",
-                }
+                },
+                time: '1 hour ago',
+                notification: 'commented on your post.'
             },
             {
                 name: "Jennifer Watson",
@@ -60,7 +64,9 @@ function setupAllResponses(c) {
                 similar: {
                     friends: "137 Similar Friends",
                     interests: "9 Similar Interests",
-                }
+                },
+                time: '1 hour ago',
+                notification: 'replied to your comment.'
             },
             {
                 name: "David Bose",
@@ -72,7 +78,9 @@ function setupAllResponses(c) {
                 similar: {
                     friends: "15 Similar Friends",
                     interests: "20 Similar Interests",
-                }
+                },
+                time: '2 hour ago',
+                notification: 'marked your content as Good.'
             },
             {
                 name: "Bradley Chu",
@@ -84,7 +92,9 @@ function setupAllResponses(c) {
                 similar: {
                     friends: "16 Similar Friends",
                     interests: "15 Similar Interests",
-                }
+                },
+                time: '2 hours ago',
+                notification: 'liked your comment.'
             },
             {
                 name: "Seth Rivers",
@@ -96,7 +106,9 @@ function setupAllResponses(c) {
                 similar: {
                     friends: "27 Similar Friends",
                     interests: "8 Similar Interests",
-                }
+                },
+                time: '3 hours ago',
+                notification: 'commented on your post.'
             },
             {
                 name: "Wendy Paige",
@@ -108,7 +120,9 @@ function setupAllResponses(c) {
                 similar: {
                     friends: "90 Similar Friends",
                     interests: "2 Similar Interests",
-                }
+                },
+                time: '4 hours ago',
+                notification: 'replied to your comment.'
             },
         ]
     });
