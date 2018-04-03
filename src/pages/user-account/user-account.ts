@@ -6,6 +6,8 @@ import { ListPage } from '../the-list/the-list';
 // need to create share a brand page
 import { SelectTokenAmount } from '../select-token-modal/select-token-modal';
 import { LoginPage } from '../login/login';
+import { ShareBrandPage } from '../share-brand/share-brand';
+
 
 @IonicPage()
 @Component({
@@ -23,6 +25,10 @@ export class UserAccountPage {
 
   pushList(){
     this.navCtrl.push(ListPage);
+  }
+
+  pushShare(){
+    this.navCtrl.push(ShareBrandPage);
   }
 
   pushTokens(){

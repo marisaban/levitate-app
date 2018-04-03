@@ -4,7 +4,9 @@ export const FeedDummyData = [
     "user": {
       "guid": "fd70a0c8-d1eb-4f43-be94-0f0b4a4857ea",
       "avatar": "assets/img/Elizabeth_Caprini.png",
-      "name": "Elizabeth Caprini"
+      "name": "Elizabeth Caprini",
+      "brand": "Victornox Cologne",
+      "image": "assets/brands/swiss-army-cologne.jpeg",
     },
     "date": "Today 1:45pm",
     "image": "assets/img/Friends_Photo.svg",
@@ -31,7 +33,9 @@ export const FeedDummyData = [
     "user": {
       "guid": "24070368-306a-42b4-87c8-312bce782682",
       "avatar": "assets/img/David_Hein.png",
-      "name": "David Hein"
+      "name": "David Hein",
+      "brand": "J Brand",
+      "image": "assets/brands/J-Brand.png",
     },
     "date": "Today 1:45pm",
     "image": null,
@@ -53,7 +57,9 @@ export const FeedDummyData = [
     "user": {
       "guid": "1d5fa2bc-8159-4a08-9b30-600be7ec7ab3",
       "avatar": "assets/img/Gloria_May.png",
-      "name": "Angela Davis"
+      "name": "Angela Davis",
+      "brand": "Heineken",
+      "image": "assets/brands/heineken.png",
     },
     "date": "Today 1:42pm",
     "image": "assets/img/Link_Image.svg",
@@ -83,7 +89,9 @@ export const FeedDummyData = [
     "user": {
       "guid": "69f13079-a1c0-4e82-8cb5-3756b04132ac",
       "avatar": "assets/img/Jason_Simpson.png",
-      "name": "Jason Simpson"
+      "name": "Jason Simpson",
+      "brand": "Stuart Weitzman",
+      "image": "assets/brands/Levis.jpg",
     },
     "date": "Today 1:45pm",
     "image": "assets/img/Funny_Image.svg",
@@ -109,7 +117,8 @@ export const FeedDummyData = [
     "user": {
       "guid": "2a36985b-2eeb-4991-a002-beb4a2f07f66",
       "avatar": "assets/img/Chris_Flay.png",
-      "name": "Chris Flay"
+      "name": "Chris Flay",
+      "brand": "Eileen Fisher"
     },
     "date": "Today 1:45pm",
     "image": "https://unsplash.it/616",
